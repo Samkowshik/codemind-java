@@ -4,9 +4,9 @@ class sam
     public static void main(String args[])
     {
         Scanner sc= new Scanner(System.in);
-        int n,a[],i,x,y,s=0;
+        int n,a[],i,j,s=0,x,y,k;
         n=sc.nextInt();
-        a= new int[n];
+        a=new int[n];
         for(i=0;i<n;i++)
         {
             a[i]=sc.nextInt();
@@ -15,11 +15,15 @@ class sam
         y=sc.nextInt();
         for(i=0;i<n;i++)
         {
-            if(a[i]<x || a[i]>y)
+            k=0;
+            for(j=x;j<=y;j++)
             {
-                s=s+a[i];
+                if(a[i]==j)
+                k=1;
             }
+            if(k==0)
+            s=s+a[i];
         }
-        System.out.print(s);
+        System.out.println(s);
     }
 }
