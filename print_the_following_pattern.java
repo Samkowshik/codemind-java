@@ -1,18 +1,22 @@
 import java.util.Scanner;
-class pat
+class sam
 {
-    public static void main(String[] args)
-    {
-        Scanner sc=new Scanner(System.in);
-        int n,i,j;
-        n=sc.nextInt();
-        for(i=1;i<=n;i++)
-        {
-            for(j=1;j<=i;j++)
-            {
-                System.out.print(j);
-            }
-            System.out.println();
-        }
-    }
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n,j,i;
+		n=sc.nextInt();
+		for(i=0;i<n;i++)
+		{
+		    for(j=0;j<n;j++)
+		    {
+		        if(i==j)
+		        System.out.print(0);
+		        else
+		        System.out.print("x");
+		    }
+			System.out.print("
+");
+		}
+	}
 }
