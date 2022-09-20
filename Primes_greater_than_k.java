@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class sam
+{
+    public static void main (String args[])
+    {
+        Scanner sc= new Scanner(System.in);
+        int n,a[],i,f,c=0,j,k;
+        n=sc.nextInt();
+        a=new int[n];
+        for(i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        k=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            f=0;
+            if(a[i]<k)
+            continue;
+            for(j=2;j<a[i];j++)
+            {
+                if(a[i]%j==0)
+                {
+                    f=1;
+                    break;
+                }
+            }
+            if(f==0)
+            c++;
+        }
+        System.out.println(c);
+    }
+}
