@@ -4,7 +4,7 @@ class sam
     public static int rev(int n)
     {
         int r,s=0;
-        while(n!=0)
+        while(n>0)
         {
             r=n%10;
             s=s*10+r;
@@ -12,31 +12,30 @@ class sam
         }
         return s;
     }
-    public static void main (String args[])
+    public static int pri(int n)
     {
-        Scanner sc= new Scanner(System.in);
-        int n,i,f=0,f1=0;
-        n=sc.nextInt();
+        int i,f=0;
         for(i=2;i<n;i++)
         {
+            if(n==1)
+            continue;
             if(n%i==0)
             {
                 f=1;
                 break;
             }
         }
-        n=rev(n);
-        for(i=2;i<n;i++)
-        {
-            if(n%i==0)
-            {
-                f1=1;
-                break;
-            }
-        }
-        if(f==0&&f1==0)
+        return f;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc= new Scanner(System.in);
+        int n,r;
+        n=sc.nextInt();
+        r=rev(n);
+        if(pri(n)==0&&pri(r)==0)
         System.out.println("circular prime");
-        else if(f==0)
+        else if(pri(n)==0&&pri(r)!=0)
         System.out.println("prime but not a circular prime");
         else
         System.out.println("not prime");
