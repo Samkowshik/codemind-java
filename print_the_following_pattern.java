@@ -10,10 +10,7 @@ class sam
         {
             for(j=1;j<=n;j++)
             {
-                if  (i==j ||j==1||j==n)
-                System.out.print("* ");
-                else
-                System.out.print("  ");
+                System.out.printf("%c ",64+i);
             }
             System.out.println();
         }
