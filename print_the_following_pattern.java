@@ -6,9 +6,9 @@ class sam
         Scanner sc= new Scanner(System.in);
         int n,i,j;
         n=sc.nextInt();
-        for(i=1;i<=n;i++)
+        for(i=n;i>0;i--)
         {
-            for(j=1;j<=n;j++)
+            for(j=i;j>0;j--)
             {
                 System.out.printf("%c ",64+i);
             }
