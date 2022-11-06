@@ -4,18 +4,23 @@ class sam
     public static void main(String args[])
     {
         Scanner sc= new Scanner(System.in);
-        int n,i,j;
+        int n,i,j,a[];
         n=sc.nextInt();
-        for(i=1;i<=n;i++)
+        a=new int[n];
+        for(i=1;i<n;i++)
         {
             for(j=1;j<=n;j++)
             {
-                if(i==j ||j==n-i+1)
-                System.out.print("x");
+                if(i==j || j==1)
+                System.out.print("*");
                 else
-                System.out.print("0");
+                System.out.print(" ");
             }
             System.out.println();
+        }
+        for(i=1;i<=n;i++)
+        {
+            System.out.print("*");
         }
     }
 }
